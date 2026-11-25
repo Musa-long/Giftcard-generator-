@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PSN Card Lab</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main>
+  <h1>PSN Card Lab</h1>
+  <p class="sub">Format generator + live validator</p>
+
+  <section class="controls">
+    <label>Count <input id="qty" type="number" min="1" max="50" value="10"></label>
+    <label class="chk"><input id="amb" type="checkbox" checked> exclude I O 0 1</label>
+    <button id="gen">Generate</button>
+    <button id="verify" class="ghost">Check all</button>
+    <button id="csv" class="ghost">Export CSV</button>
+    <button id="clear" class="ghost">Clear</button>
+  </section>
+
+  <p id="status" class="status"></p>
+  <ul id="list"></ul>
+
+  <section class="manual">
+    <input id="manual" placeholder="Paste a code to check" maxlength="14" autocomplete="off">
+    <button id="check1">Check it</button>
+  </section>
+
+  <p class="foot">Unchecked codes are just well-formed strings. Only <strong>VALID</strong> means Sony confirmed a live card.</p>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>
